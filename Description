@@ -1,0 +1,52 @@
+# Industrial 4–20 mA Signal Conditioning & Analog Fault Detection
+
+## Overview
+
+Design and simulation of an industrial analog current-loop system using LTspice.
+
+## System Architecture
+
+0–5 V Sensor
+→ Buffer
+→ Low-Pass Filter
+→ Command Voltage Generation
+→ Closed-Loop Current Transmitter
+→ 24 V Current Loop
+→ 250 Ω Receiver
+→ 1–5 V
+→ Analog Fault Detection
+
+## Specifications
+
+| Parameter | Value |
+|---|---:|
+| Sensor input | 0–5 V |
+| Loop current | 4–20 mA |
+| Supply | 24 V DC |
+| Receiver resistance | 250 Ω |
+| Receiver output | 1–5 V |
+| Filter cutoff | 15.9 Hz |
+| Low-current threshold | 3.6 mA |
+| Over-current threshold | >20 mA |
+
+## Transfer Function
+
+I_loop = 4 mA + 3.2 mA/V × V_in
+
+## Main Features
+
+- Analog signal conditioning
+- 10 kΩ / 1 µF low-pass filter
+- Closed-loop current regulation
+- 24 V industrial current loop
+- 250 Ω current-to-voltage conversion
+- Analog low/open-loop detection
+- Analog over-current detection
+- LTspice simulation
+
+## Simulation
+
+### DC Sweep
+
+```text
+.dc V1 0 5 0.1
